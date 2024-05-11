@@ -22,6 +22,6 @@ interface BukuDao {
     @Query("DELETE FROM buku WHERE id = :id")
     suspend fun deleteById(id: Long)
 
-    @Query("SELECT * FROM buku ORDER BY genre DESC")
+    @Query("SELECT * FROM buku ORDER BY judul ASC")
     fun getBuku(): Flow<List<Buku>>
 }
